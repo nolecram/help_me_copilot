@@ -1,0 +1,21 @@
+[tool.ruff]
+target-version = "py38"
+line-length = 120
+extend-exclude = [
+    "src/Chat",
+    "src/examples",
+    "src/Legacy",
+    "src/SybaseDB",
+    "src/Ruby_Examples",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

@@ -1,5 +1,6 @@
+import os
 import random
-import json
+
 from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__, static_url_path='/static')
@@ -83,4 +84,5 @@ def add_excuse():
     return jsonify({'success': True, 'message': 'Excuse added successfully'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug = os.environ.get('FLASK_DEBUG', 'false').lower() == 'true'
+    app.run(debug=debug)

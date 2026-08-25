@@ -19,35 +19,31 @@ HelpMeCopilot/
 │   ├── README.md                 # Documentation index
 │   ├── SETUP.md                  # Setup and installation guide
 │   ├── PROJECT_STRUCTURE.md      # Detailed directory reference
+│   ├── CUSTOM_AGENTS.md          # Custom Copilot agents guide
 │   └── USER_REQUIREMENTS_SPECIFICATION.md
 ├── src/
-│   ├── applications/             # Standalone applications
-│   │   ├── chocolate_cake_recipes.py
-│   │   ├── temperature_converter.py
-│   │   └── excuse_generator/
-│   ├── examples/                 # Code examples by language
-│   │   ├── hello-world/          # Hello World in 25+ languages
-│   │   └── misc/                 # Various example scripts
-│   ├── infrastructure/           # Infrastructure as Code
-│   │   ├── lamp_stack/           # Terraform LAMP stack
-│   │   └── azure_aws/            # Azure/AWS examples
-│   ├── ml_experiments/           # Machine Learning notebooks & scripts
-│   │   ├── SampleMLFunction.ipynb
-│   │   └── SampleMLJupyter.ipynb
-│   ├── legacy/                   # Deprecated and legacy code
-│   │   ├── assembly/
-│   │   ├── cobol/
-│   │   ├── sybase_db/
-│   │   └── chat/
+│   ├── chocolate_cake_recipes.py # Recipe management application
+│   ├── temperature_converter.py  # Unit conversion utility
+│   ├── ExcuseGenerator/          # Flask web application
+│   ├── examples/
+│   │   └── DiffFrame/HelloWorld/  # Hello World in 25+ languages
+│   ├── ICA_Azure_AWS/            # Azure/AWS + LAMP Terraform examples
+│   ├── ML_Experiments/           # Machine Learning notebooks
+│   ├── Legacy/                   # Assembly, C, COBOL examples
+│   ├── Ruby_Examples/            # Ruby scripts
+│   ├── SybaseDB/                 # Sybase C++ database examples
+│   ├── Chat/                     # Copilot chat experiments
 │   └── README.md
+├── modules/                      # Reusable Terraform modules
+│   └── lamp_stack/               # LAMP stack module
 ├── tests/                        # Test suite
-│   ├── test_*.py                 # Python test files
+│   ├── test_chocolate_cake_recipes.py
+│   ├── test_TestA.py             # Python test files
 │   └── Test.js                   # JavaScript tests
 ├── assets/                       # Static assets & images
 │   ├── README.md
 │   └── images/
-├── .github/
-│   └── copilot-instructions.md
+├── .github/                      # GitHub config, workflows, Copilot instructions
 ├── requirements.txt              # Python dependencies
 ├── CHANGELOG.md                  # Version history
 ├── CONTRIBUTING.md               # Contribution guidelines
@@ -74,40 +70,37 @@ cd HelpMeCopilot
 pip install -r requirements.txt
 
 # Explore examples
-cd src/examples/hello-world
+cd "src/examples/DiffFrame/HelloWorld"
 ls
 ```
 
 ## 📂 Project Categories
 
 ### Applications
-Located in `src/applications/`, these are ready-to-run standalone tools:
+Located in `src/`, these are ready-to-run standalone tools:
 - **chocolate_cake_recipes.py** - Recipe management application
 - **temperature_converter.py** - Unit conversion utility
-- **excuse_generator/** - Web-based excuse generator with Flask
+- **ExcuseGenerator/** - Web-based excuse generator with Flask
 
 ### Examples
-Located in `src/examples/`, organized by language and purpose:
-- **hello-world/** - Hello World implementations in 25+ programming languages
-- **misc/** - Various utility scripts and examples
+Located in `src/examples/DiffFrame/HelloWorld/`:
+- Hello World implementations in 25+ programming languages
 
 ### Infrastructure
-Located in `src/infrastructure/`, infrastructure-as-code examples:
-- **lamp_stack/** - Terraform configurations for LAMP (Linux, Apache, MySQL, PHP) deployment
-- **azure_aws/** - Azure and AWS infrastructure examples with Terraform
+Infrastructure-as-code examples:
+- **src/ICA_Azure_AWS/** - Azure and AWS examples with Terraform, plus a LAMP stack
+- **modules/lamp_stack/** - Reusable Terraform LAMP stack module
 
 ### Machine Learning
-Located in `src/ml_experiments/`:
+Located in `src/ML_Experiments/`:
 - Jupyter notebooks for ML experiments
 - Sample ML function implementations
-- Data science workflows
 
-### Legacy Code
-Located in `src/legacy/`:
-- Assembly language examples
-- COBOL demonstrations
-- Sybase database examples
-- Chat and experimental scripts (for reference only)
+### Legacy & Language Examples
+- **src/Legacy/** - Assembly, C, and COBOL demonstrations
+- **src/Ruby_Examples/** - Ruby scripts
+- **src/SybaseDB/** - Sybase C++ database examples
+- **src/Chat/** - Copilot chat experiments (for reference only)
 
 ## 🧪 Testing
 
@@ -162,5 +155,5 @@ See **[CUSTOM_AGENTS.md](docs/CUSTOM_AGENTS.md)** for detailed information on us
 
 ---
 
-**Last Updated:** October 29, 2025  
+**Last Updated:** August 25, 2026  
 **Maintainer:** [nolecram](https://github.com/nolecram)

@@ -11,11 +11,18 @@ All notable changes to this project will be documented in this file.
 - Updated CONTRIBUTING.md with comprehensive contribution guidelines
 - Enhanced .gitignore with comprehensive rules
 - Updated requirements.txt with essential dependencies
+- Ruff lint configuration (pyproject.toml) and a CI lint step
+- Secure PDO example (src/Chat/Secure.php) alongside the vulnerable demo
 
 ### Changed
 - Reorganized repository structure for better clarity
 - Improved documentation organization
 - Enhanced code examples categorization
+- README.md and PROJECT_STRUCTURE.md now match the actual repository layout
+
+### Fixed
+- Corrected `input()` typo in tests/TestC.py
+- ExcuseGenerator Flask debug flag is now environment-driven; removed unused import
 
 ### Removed
 - Deleted macOS .DS_Store file

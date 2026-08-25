@@ -12,34 +12,35 @@ HelpMeCopilot/
 ├── .github/                       # GitHub configuration
 ├── docs/                          # Documentation directory
 ├── src/                           # Source code and examples
+├── modules/                       # Reusable Terraform modules
 ├── tests/                         # Test suite
 └── assets/                        # Static assets and images
 ```
 
 ## Source Code Structure (`/src`)
 
-### Applications (`src/applications/`)
+### Applications (`src/`)
 - **chocolate_cake_recipes.py** - Recipe management and display
 - **temperature_converter.py** - Unit conversion utilities
-- **excuse_generator/** - Flask web application
+- **ExcuseGenerator/** - Flask web application
 
-### Examples (`src/examples/`)
-- **hello-world/** - Hello World in 25+ programming languages
-- Language-specific implementations
+### Examples (`src/examples/DiffFrame/HelloWorld/`)
+- Hello World in 25+ programming languages
+- **pom.xml** - Java build example
 
-### Infrastructure (`src/infrastructure/`)
-- **lamp_stack/** - Terraform LAMP stack configuration
-- **azure_aws/** - Azure and AWS examples
+### Infrastructure
+- **src/ICA_Azure_AWS/** - Azure/AWS Terraform examples and a LAMP stack (`lamp_stack_azure/`)
+- **modules/lamp_stack/** - Reusable Terraform LAMP stack module
 
-### Machine Learning (`src/ml_experiments/`)
+### Machine Learning (`src/ML_Experiments/`)
 - Jupyter notebooks for ML experiments
 - Sample ML functions
 
-### Legacy (`src/legacy/`)
-- Assembly, COBOL, C examples
-- Sybase database examples
-- Ruby examples
-- Chat and experimental scripts
+### Legacy & Language Examples
+- **src/Legacy/** - Assembly, C, and COBOL examples
+- **src/SybaseDB/** - Sybase C++ database examples
+- **src/Ruby_Examples/** - Ruby examples
+- **src/Chat/** - Copilot chat experiments
 
 ## Test Structure (`/tests`)
 - test_chocolate_cake_recipes.py
@@ -71,4 +72,4 @@ Contribution guidelines and workflow
 
 ---
 
-**Last Updated:** October 29, 2025
+**Last Updated:** August 25, 2026
